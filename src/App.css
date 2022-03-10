@@ -1,0 +1,47 @@
+@font-face {
+  font-family: tix;
+  src: url("./fonts/Roboto-Light.ttf");
+}
+
+@font-face {
+  font-family: tix2;
+  src: url("./fonts/BreitkopfFraktur.ttf");
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+  font-family: tix;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 5vh;
+  background-color: black;
+  color: white;
+}
+
+nav span {
+  color: red;
+  font-size:35px ;
+  font-family: tix2;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+}
+nav a:hover {
+  color: red;
+  transition: 1s;
+  transform: translateX(10px);
+  border-bottom: 0.5px solid red;
+}
+
+.test a {
+  margin-right: 7vh;
+}

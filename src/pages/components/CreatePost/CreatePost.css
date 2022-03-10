@@ -1,0 +1,94 @@
+.container {
+  padding: 40px;
+  width: 40vw;
+  height: 32vw;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.createPost {
+  position: absolute;
+  left: 30%;
+  top: 30%;
+  background-color: black;
+  color: whitesmoke;
+  border-radius: 20px;
+}
+
+.createPost h1 {
+  font-size: 35px;
+  color: white;
+  font-family: tix;
+}
+
+.createPost span {
+    font-size: 50px;
+    color: red;
+    font-family: tix2;
+}
+
+
+.allInput {
+  margin: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 30px;
+}
+
+.allInput1{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    text-align: start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    font-size: 30px;
+}
+
+.allInput1 textarea{
+    margin-top: 15px;
+    width: 100%;
+    height: 150px;
+    font-size: 15px;
+    padding: 10px ;
+}
+
+.allInput1 textarea:focus{
+    outline: none;
+    border: none;
+    border: 2.5px solid red;
+}
+
+.allInput input {
+    width: 80%;
+    margin-left: 10px;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.allInput input:focus {
+    outline: none;
+    border: none;
+    border: 2.5px solid red;
+}
+
+.container button {
+    width: 10vw;
+    height: 2vw;
+    font-size: 17px;
+    margin: 10px;
+    background-color: whitesmoke;
+    border: 1px solid black;
+    margin-bottom: 10px;
+    border: 1px solid red;
+
+}
+
+.container button:hover {
+    border: 1px solid red;
+    background-color: whitesmoke;
+    color: red;
+    transition: 0.1s;
+}
