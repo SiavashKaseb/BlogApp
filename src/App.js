@@ -6,6 +6,8 @@ import CreatePost from "./pages/components/CreatePost/CreatePost";
 import Login from "./pages/components/Login/Login";
 import { signOut } from "firebase/auth";
 import { auth } from "./config/firebaseConfig";
+import Register from "./pages/components/Register/Register"
+
 function App() {
   const [isAuth, setIsAuth] = useState(false);
   const text = "hello";
@@ -26,6 +28,7 @@ function App() {
         <div className="test">
           <Link to="/">Home</Link>
           <Link to="/about">About us</Link>
+          <Link to="/register">Register</Link>
 
           {/* {!isAuth ? 
             <Link to="/login">Login</Link>
@@ -49,6 +52,7 @@ function App() {
           path="/login"
           element={<Login setIsAuth={setIsAuth} text={text} />}
         />
+        <Route path="/register" element={ <Register/>}/>
       </Routes>
     </Router>
   );

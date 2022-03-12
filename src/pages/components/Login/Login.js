@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Login.css"
-import Swal from "sweetalert2";
+import {Report} from "notiflix/build/notiflix-report-aio"
 import { auth, provider } from "../../../config/firebaseConfig";
 import { signInWithPopup , signInWithEmailAndPassword } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
@@ -25,21 +25,11 @@ function Login(props) {
     signInWithEmailAndPassword(auth, email, password).then((result) => {
       localStorage.setItem("isAuth", true);
       props.setIsAuth(true);
-      Swal.fire({
-        title: "Welcome Back!",
-        text: "You sign in",
-        icon: "success",
-        timer: 3000
-      })
+      Report.success("Welcome Back!" , "You sign in" , "OK")
       console.log(result)
     }).catch((err) => {
       console.log(err)
-      Swal.fire({
-        title: "Opps...",
-        text: err,
-        icon: "error",
-        timer: 3000
-      })
+      Report.failure("Opps..." , `${err}` , "OK")
     })
     
   }
